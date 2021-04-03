@@ -119,7 +119,9 @@ class SolarPy:
                 
                 if len(kp_vals) < len(vec_kp_dates):
                     vec_kp_dates = date_kp_val + pd.to_timedelta(np.arange(len(kp_vals))*3, 'H')
-                self.df_kp = pd.DataFrame({"Time":vec_kp_dates, "Kp":kp_vals})
+
+                # self.df_kp = pd.DataFrame({"Time":vec_kp_dates, "Kp":kp_vals})
+                self.df_kp = pd.DataFrame({"Kp":kp_vals}, index=vec_kp_dates)
         except:
             print("Unexpected error:", sys.exc_info()[0])
             raise

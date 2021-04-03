@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # Raw Kp files
-tab/
+data_kp/
 
 # C extensions
 *.so
